@@ -11,6 +11,8 @@ import { faSun } from "@fortawesome/free-solid-svg-icons";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
+import SunsetTimestamp from "./SunsetTimestamp";
+import SunriseTimestamp from "./SunriseTimestamp";
 
 export default function Main(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -30,6 +32,8 @@ export default function Main(props) {
       cloudiness: response.data.clouds.all,
       date: new Date(response.data.dt * 1000),
       precipitation: response.data.precipitation,
+      sunrise: new Date(response.data.sys.sunrise * 1000),
+      sunset: new Date(response.data.sys.sunset * 1000),
     });
   }
   if (weatherData.ready) {
@@ -166,14 +170,18 @@ export default function Main(props) {
                         icon={faSun}
                       />
                       <h3>Sunrise</h3>
-                      <h2 id="sunrise-time">4:00AM</h2>
+                      <h2 id="sunrise-time">
+                        <SunriseTimestamp date={weatherData.sunrise} />
+                      </h2>
                       <br />
                       <FontAwesomeIcon
                         className="sunrise-set-icon"
                         icon={faMoon}
                       />
                       <h3>Sunset</h3>
-                      <h2 id="sunset-time">7:30PM</h2>
+                      <h2 id="sunset-time">
+                        <SunsetTimestamp date={weatherData.sunset} />
+                      </h2>
                     </div>
                   </div>
                 </section>
