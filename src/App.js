@@ -10,8 +10,11 @@ function App() {
     <div className="App container">
       <Weather defaultcity="Sydney" />
       <footer className="container text-center my-3">
-        <FontAwesomeIcon className="icon" icon={faCode} /> Designed & Coded by
-        Thai Ha
+        <FontAwesomeIcon className="icon" icon={faCode} /> This project was
+        coded by Thai Ha and is open source on{" "}
+        <a href="https://github.com/thaihanguyen98/weather-react-project">
+          Github
+        </a>
       </footer>
     </div>
   );

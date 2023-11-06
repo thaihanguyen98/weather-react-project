@@ -38,13 +38,13 @@ export default function WeatherInfo(props) {
                             />
                           </h1>
                           <h3 className="text-end pt-2">
-                            <small>High</small>
+                            <small>H: </small>
                             <span className="temps" id="high-temp">
                               {props.data.highTemp}
                             </span>
                             °<span className="celsius">C</span>
                             <br />
-                            <small>Low</small>
+                            <small>L: </small>
                             <span className="temps" id="low-temp">
                               {props.data.lowTemp}
                             </span>
@@ -58,7 +58,7 @@ export default function WeatherInfo(props) {
                             <p>
                               <span id="description-temp">Partly cloudy</span>
                               <br />
-                              Feels like
+                              Feels like{" "}
                               <span className="temps" id="feels-like">
                                 {props.data.feelsLike}
                               </span>
@@ -142,7 +142,7 @@ export default function WeatherInfo(props) {
                         />
                         <h3>Sunrise</h3>
                         <h2 id="sunrise-time">
-                          <SunTimestamp date={props.data.sunset} />
+                          <SunTimestamp date={props.data.sunrise} />
                         </h2>
                         <br />
                         <FontAwesomeIcon
@@ -151,7 +151,7 @@ export default function WeatherInfo(props) {
                         />
                         <h3>Sunset</h3>
                         <h2 id="sunset-time">
-                          <SunTimestamp date={props.data.sunrise} />
+                          <SunTimestamp date={props.data.sunset} />
                         </h2>
                       </div>
                     </div>
