@@ -1,4 +1,5 @@
 import React from "react";
+import "./Main.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LoadingIcon from "./icons/loading.svg";

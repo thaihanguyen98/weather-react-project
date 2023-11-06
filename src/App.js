@@ -8,7 +8,7 @@ import { faCode } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container">
       <Header />
       <div className="row d-flex">
         <div class="local-overview col ms-lg-4 mt-4">
