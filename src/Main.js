@@ -11,8 +11,7 @@ import { faSun } from "@fortawesome/free-solid-svg-icons";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
-import SunsetTimestamp from "./SunsetTimestamp";
-import SunriseTimestamp from "./SunriseTimestamp";
+import SunTimestamp from "./SunTimestamp";
 
 export default function Main(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -171,7 +170,7 @@ export default function Main(props) {
                       />
                       <h3>Sunrise</h3>
                       <h2 id="sunrise-time">
-                        <SunriseTimestamp date={weatherData.sunrise} />
+                        <SunTimestamp date={weatherData.sunrise} />
                       </h2>
                       <br />
                       <FontAwesomeIcon
@@ -180,7 +179,7 @@ export default function Main(props) {
                       />
                       <h3>Sunset</h3>
                       <h2 id="sunset-time">
-                        <SunsetTimestamp date={weatherData.sunset} />
+                        <SunTimestamp date={weatherData.sunset} />
                       </h2>
                     </div>
                   </div>

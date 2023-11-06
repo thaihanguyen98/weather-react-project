@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function SunsetTimestamp(props) {
+export default function SunTimestamp(props) {
   let hours = props.date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
