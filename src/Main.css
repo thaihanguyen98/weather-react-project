@@ -1,0 +1,97 @@
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: lighter;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+strong {
+  font-weight: bold;
+}
+
+small {
+  font-size: 14px;
+}
+
+p {
+  margin: 5px 10px;
+}
+
+a {
+  color: rgb(66, 111, 182);
+  transition: all 150ms ease-in;
+  text-decoration: none;
+}
+a:hover {
+  background: linear-gradient(rgba(212, 214, 254, 0.8), #9acedd);
+  border-radius: 10px;
+  padding: 2px 4px;
+}
+
+hr {
+  margin: 0;
+}
+
+#location {
+  font-weight: bold;
+}
+.local-overview,
+.global-overview {
+  box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.15),
+    -2px -2px 6px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  background: #fcfcfc;
+}
+
+.card {
+  min-height: 230px;
+  margin-top: 10px;
+}
+
+.card li {
+  font-size: 18px;
+  background: rgba(198, 241, 217, 0.4);
+}
+
+.current-weather {
+  background: #bfedfb;
+  border-radius: 10px;
+}
+
+.temp-details .icon {
+  font-size: 13px;
+  color: rgba(0, 82, 37, 0.798);
+  padding-left: 10px;
+}
+
+.temp-details .card {
+  background: rgba(198, 241, 217, 0.4);
+}
+
+.sun-time .card {
+  background: #fbeabf;
+}
+
+.sunrise-set-icon {
+  font-size: 17px;
+  color: #00526beb;
+  text-shadow: none;
+}
+
+#description-temp {
+  text-transform: capitalize;
+}
