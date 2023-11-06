@@ -10,6 +10,7 @@ import { faCloud } from "@fortawesome/free-solid-svg-icons";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 
 export default function Main(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -40,7 +41,9 @@ export default function Main(props) {
               <h2>
                 Forecast in <span id="location">{weatherData.city}</span>
               </h2>
-              <h3 id="today">Monday, 6 November 2023</h3>
+              <h3 id="today">
+                <FormattedDate date={weatherData.date} />
+              </h3>
             </div>
             <div className="container flex-md-row flex-column">
               <div className="row">
