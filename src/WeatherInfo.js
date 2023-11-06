@@ -9,6 +9,7 @@ import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import FormattedDate from "./FormattedDate";
 import SunTimestamp from "./SunTimestamp";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
@@ -32,14 +33,9 @@ export default function WeatherInfo(props) {
                       <div className="card-body">
                         <div className="d-flex">
                           <h1 className="flex-grow-1">
-                            <span id="temp-now">{props.data.temperature}</span>°
-                            <span className="celsius">C</span>
-                            <span className="toggle-temps">
-                              /{" "}
-                              <a href="/" className="fahrenheit">
-                                F
-                              </a>
-                            </span>
+                            <WeatherTemperature
+                              celsius={props.data.temperature}
+                            />
                           </h1>
                           <h3 className="text-end pt-2">
                             <small>High</small>
