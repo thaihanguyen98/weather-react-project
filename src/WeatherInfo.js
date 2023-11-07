@@ -10,6 +10,7 @@ import FormattedDate from "./FormattedDate";
 import SunTimestamp from "./SunTimestamp";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherForecast from "./WeatherForecast";
 
 export default function WeatherInfo(props) {
   return (
@@ -158,7 +159,10 @@ export default function WeatherInfo(props) {
                   </section>
                 </div>
               </div>
-              <section className="full-forecast d-flex justify-content-md-around my-4"></section>
+              <section className="full-forecast d-flex justify-content-md-around my-4">
+                {" "}
+                <WeatherForecast coordinates={props.data.coord} />
+              </section>
               <div className="w-100 d-lg-none d-block mb-2"></div>
             </div>
           </main>

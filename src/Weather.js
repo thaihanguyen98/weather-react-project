@@ -12,6 +12,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coord: response.data.coord,
       temperature: Math.round(response.data.main.temp),
       city: response.data.name,
       feelsLike: Math.round(response.data.main.feels_like),

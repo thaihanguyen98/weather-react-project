@@ -1,3 +1,24 @@
+:root {
+  --primary-color: #58508d;
+  --secondary-color: #ff6361;
+  --teritary-color: #7da0fa;
+  --accent-color: #ffa600;
+  --background-color: #f4f7fe;
+  --container-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  --icon-btn-shadow: 1px 1px 8px rgba(145, 145, 145, 0.15);
+}
+
+body {
+  background: radial-gradient(
+    328px at 2.9% 15%,
+    rgb(191, 224, 251) 0%,
+    rgb(232, 233, 251) 25.8%,
+    rgb(252, 239, 250) 50.8%,
+    rgb(234, 251, 251) 77.6%,
+    rgb(240, 251, 244) 100.7%
+  );
+}
+
 .App {
   min-height: 100vh;
   display: flex;
@@ -14,16 +35,11 @@
   width: 10px;
 }
 
-.local-overview,
-.global-overview {
+.card {
   box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.15),
     -2px -2px 6px 1px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   background: white;
-}
-
-.global-overview h2 {
-  font-size: 22px;
 }
 
 footer .icon {

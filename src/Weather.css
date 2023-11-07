@@ -4,6 +4,7 @@
   padding-top: 10px;
 }
 
+/*button*/
 button i {
   color: #0a95c0;
   text-shadow: 1px 1px 8px rgba(145, 145, 145, 0.15);
@@ -96,11 +97,13 @@ hr {
 .card {
   min-height: 230px;
   margin-top: 10px;
+  box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.15),
+    -2px -2px 6px 1px rgba(0, 0, 0, 0.15);
 }
 
 .card li {
   font-size: 18px;
-  background: rgba(198, 241, 217, 0.4);
+  background: var(--secondary-color);
 }
 
 .current-weather {
@@ -115,16 +118,17 @@ hr {
 }
 
 .temp-details .card {
-  background: rgba(198, 241, 217, 0.4);
+  background: var(--secondary-color);
 }
 
 .sun-time .card {
-  background: #fbeabf;
+  background: var(--accent-color);
+  color: white;
 }
 
 .sunrise-set-icon {
   font-size: 17px;
-  color: #00526beb;
+  color: white;
   text-shadow: none;
 }
 
