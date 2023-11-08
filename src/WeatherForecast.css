@@ -11,21 +11,24 @@
   display: none;
 }
 
-.WeatherForecast {
-  border-radius: 10px;
-  text-align: center;
-  background-color: rgba(149, 205, 236, 0.22);
-  padding: 8px 20px;
-  box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.15),
-    -2px -2px 6px 1px rgba(0, 0, 0, 0.15);
+.full-forecast::-webkit-scrollbar {
+  display: none;
 }
 
-.WeatherForecast:hover {
-  background-color: rgba(73, 177, 234, 0.33);
+.daily {
+  border-radius: 10px;
+  text-align: center;
+  background-color: var(--light-blue-color);
+  padding: 8px 20px;
+  box-shadow: var(--box-shadow);
+}
+
+.daily:hover {
+  background-color: var(--mid-blue-color);
   transform: scale(1.05);
 }
 
-.WeatherForecast:hover .ForecastIcon {
+.daily:hover .ForecastIcon {
   filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.4));
   transform: scale(1.1);
 }

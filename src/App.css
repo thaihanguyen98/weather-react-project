@@ -1,47 +1,20 @@
 :root {
-  --primary-color: #58508d;
-  --secondary-color: #ff6361;
-  --teritary-color: #7da0fa;
-  --accent-color: #ffa600;
-  --background-color: #f4f7fe;
+  --deep-purple-color: rgba(186, 190, 245);
+  --mid-purple-color: rgba(192, 192, 245);
+  --light-purple-color: rgba(218, 203, 246);
+  --blue-color: rgb(66, 111, 182);
+  --deep-blue-color: #0a95c0;
+  --mid-blue-color: rgba(73, 177, 234, 0.33);
+  --light-blue-color: rgba(149, 205, 236, 0.22);
+  --font-color: #272144;
   --container-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  --box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.15),
+    -2px -2px 6px 1px rgba(0, 0, 0, 0.15);
   --icon-btn-shadow: 1px 1px 8px rgba(145, 145, 145, 0.15);
 }
-
-body {
-  background: radial-gradient(
-    328px at 2.9% 15%,
-    rgb(191, 224, 251) 0%,
-    rgb(232, 233, 251) 25.8%,
-    rgb(252, 239, 250) 50.8%,
-    rgb(234, 251, 251) 77.6%,
-    rgb(240, 251, 244) 100.7%
-  );
-}
-
 .App {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  scroll-behavior: smooth;
 }
-
-.App::-webkit-scrollbar,
-.App::-webkit-scrollbar-thumb {
-  background-color: rgba(149, 205, 236, 0.25);
-  border-radius: 10px;
-  width: 10px;
-}
-
-.card {
-  box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.15),
-    -2px -2px 6px 1px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
-  background: white;
-}
-
 footer .icon {
   font-size: 14px;
   color: #00526beb;

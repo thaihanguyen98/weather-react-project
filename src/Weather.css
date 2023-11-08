@@ -1,44 +1,8 @@
-.Header h1 {
-  font-size: 28px;
-  font-weight: bold;
-  padding-top: 10px;
-}
-
-/*button*/
-button i {
-  color: #0a95c0;
-  text-shadow: 1px 1px 8px rgba(145, 145, 145, 0.15);
-  border: none;
-}
-
-.input-group input {
-  font-size: 16px;
-  border-color: #0a95c0;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
-}
-
-.input-group button {
-  background-color: #f0f7f8;
-  border: 1px solid #0a95c0;
-  border-radius: 30px;
-  padding: 5px 14px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
-}
-
-.input-group button:hover {
-  background-color: #0a95c0;
-  border-color: #0a95c0;
-}
-
-.input-group button:hover i {
-  color: white;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-}
-
 h1 {
   font-size: 28px;
   font-weight: bold;
   padding-top: 10px;
+  color: var(--font-color);
 }
 
 h2 {
@@ -55,11 +19,6 @@ ul {
   list-style-type: none;
   padding: 0;
 }
-
-strong {
-  font-weight: bold;
-}
-
 small {
   font-size: 14px;
 }
@@ -69,7 +28,7 @@ p {
 }
 
 a {
-  color: rgb(66, 111, 182);
+  color: var(--blue-color);
   transition: all 150ms ease-in;
   text-decoration: none;
 }
@@ -82,14 +41,38 @@ a:hover {
 hr {
   margin: 0;
 }
-
-#location {
-  font-weight: bold;
+/*button*/
+button i {
+  color: #0a95c0;
+  text-shadow: 1px 1px 8px rgba(145, 145, 145, 0.15);
+  border: none;
 }
-.local-overview,
-.global-overview {
-  box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.15),
-    -2px -2px 6px 1px rgba(0, 0, 0, 0.15);
+
+.input-group input {
+  font-size: 16px;
+  border-color: #0a95c0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+.input-group button {
+  background-color: #f0f7f8;
+  border: 1px solid var(--deep-blue-color);
+  border-radius: 30px;
+  padding: 5px 14px;
+  box-shadow: var(--container-shadow);
+}
+
+.input-group button:hover {
+  background-color: var(--deep-blue-color);
+  border-color: var(--deep-blue-color);
+}
+
+.input-group button:hover i {
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.local-overview {
+  box-shadow: var(--box-shadow);
   border-radius: 20px;
   background: #fcfcfc;
 }
@@ -97,41 +80,59 @@ hr {
 .card {
   min-height: 230px;
   margin-top: 10px;
-  box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.15),
-    -2px -2px 6px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--box-shadow);
 }
 
 .card li {
   font-size: 18px;
-  background: var(--secondary-color);
-}
-
-.current-weather {
-  background: #bfedfb;
-  border-radius: 10px;
+  background: var(--light-blue-color) 80%;
 }
 
 .temp-details .icon {
   font-size: 13px;
-  color: rgba(0, 82, 37, 0.798);
+  color: var(--font-color);
   padding-left: 10px;
 }
 
-.temp-details .card {
-  background: var(--secondary-color);
-}
-
-.sun-time .card {
-  background: var(--accent-color);
-  color: white;
-}
-
-.sunrise-set-icon {
+.sunrise-set-icon,
+.sun-time .card,
+.temp-details .card,
+.current-weather {
   font-size: 17px;
-  color: white;
+  color: var(--font-color);
   text-shadow: none;
+  background: var(--light-blue-color);
+  border-radius: 10px;
 }
 
 #description-temp {
   text-transform: capitalize;
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+.temp-now {
+  font-size: 60px;
+  line-height: 2;
+  font-weight: 500;
+}
+.weatherIcon {
+  height: 100px;
+  width: 100px;
+}
+.toggle-temps {
+  font-size: 18px;
+  vertical-align: super;
+  padding-left: 5px;
+  font-weight: 600;
+  margin-top: 34px;
+}
+.toggle-temps:hover {
+  font-size: 20px;
+}
+#location {
+  font-weight: bold;
 }

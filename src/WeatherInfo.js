@@ -2,10 +2,11 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { faWind } from "@fortawesome/free-solid-svg-icons";
-import { faWater } from "@fortawesome/free-solid-svg-icons";
+import { faTemperatureHalf } from "@fortawesome/free-solid-svg-icons";
 import { faCloud } from "@fortawesome/free-solid-svg-icons";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faWater } from "@fortawesome/free-solid-svg-icons";
 import FormattedDate from "./FormattedDate";
 import SunTimestamp from "./SunTimestamp";
 import WeatherIcon from "./WeatherIcon";
@@ -32,48 +33,28 @@ export default function WeatherInfo(props) {
                   <section className="temp-overview col-lg-5">
                     <div className="current-weather card">
                       <div className="card-body">
-                        <div className="d-flex">
-                          <h1 className="flex-grow-1">
-                            <WeatherTemperature
-                              celsius={props.data.temperature}
-                            />
-                          </h1>
-                          <h3 className="text-end pt-2">
-                            <small>H: </small>
-                            <span className="temps" id="high-temp">
-                              {props.data.highTemp}
-                            </span>
-                            °<span className="celsius">C</span>
-                            <br />
-                            <small>L: </small>
-                            <span className="temps" id="low-temp">
-                              {props.data.lowTemp}
-                            </span>
-                            °<span className="celsius">C</span>
-                          </h3>
-                        </div>
-                        <br />
-                        <br />
-                        <div className="d-flex">
-                          <div className="flex-grow-1">
-                            <p>
-                              <span id="description-temp">Partly cloudy</span>
-                              <br />
-                              Feels like{" "}
-                              <span className="temps" id="feels-like">
-                                {props.data.feelsLike}
-                              </span>
-                              °<span className="celsius">C</span>
-                              <br />
-                              <small id="condition-msg"></small>
-                            </p>
-                          </div>
-                          <div>
+                        <div className="d-flex flex-row justify-content-center mt-3 ">
+                          <div className="mt-2">
                             <WeatherIcon
                               code={props.data.icon}
                               alt={props.data.description}
                             />
                           </div>
+                          <div className="temperature">
+                            <WeatherTemperature
+                              celsius={props.data.temperature}
+                            />
+                          </div>
+                        </div>
+                        <div className="text-center" id="description-temp">
+                          {props.data.description}
+                        </div>
+                        <div className="high-low-temps text-center">
+                          <h3>
+                            L:
+                            <span id="low-temp">{props.data.lowTemp}</span>° H:
+                            <span id="high-temp">{props.data.highTemp}</span>°
+                          </h3>
                         </div>
                       </div>
                     </div>
@@ -83,14 +64,14 @@ export default function WeatherInfo(props) {
                     <div className="card p-1 initial">
                       <ul className="list-group list-group-flush">
                         <li className="list-group-item d-flex">
-                          <strong className="flex-grow-1">Precipitation</strong>
+                          <strong className="flex-grow-1">Feels like</strong>
                           <span id="gust" className="temps">
-                            {props.data.precipitation}
+                            {props.data.feelsLike}
                           </span>
-                          <span className="celsius">mm</span>
+                          <span>°C</span>
                           <FontAwesomeIcon
                             className="icon align-self-center"
-                            icon={faWater}
+                            icon={faTemperatureHalf}
                           />
                         </li>
                         <li className="list-group-item d-flex">

@@ -44,7 +44,7 @@ export default function FormattedDate(props) {
 
   return (
     <div>
-      {day} {dayNumber} {month} {year} at {hours}:{minutes}
+      {day}, {dayNumber} {month} {year} at {hours}:{minutes}
       {ampm}
     </div>
   );
