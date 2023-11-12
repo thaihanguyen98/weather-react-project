@@ -41,3 +41,18 @@
 .ForecastTempLow {
   font-size: 14px;
 }
+
+@media only screen and (max-width: 768px) {
+  .full-forecast {
+    -ms-overflow-style: unset;
+    scrollbar-width: unset;
+  }
+
+  .full-forecast::-webkit-scrollbar,
+  .full-forecast::-webkit-scrollbar-thumb {
+    background-color: rgba(149, 205, 236, 0.1);
+    border-radius: 10px;
+    height: 10px;
+    display: unset;
+  }
+}
