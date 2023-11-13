@@ -34,7 +34,7 @@ export default function WeatherInfo(props) {
                     <div className="current-weather card">
                       <div className="card-body">
                         <div className="d-flex flex-row justify-content-center mt-3 ">
-                          <div className="mt-2">
+                          <div>
                             <WeatherIcon
                               code={props.data.icon}
                               alt={props.data.description}
