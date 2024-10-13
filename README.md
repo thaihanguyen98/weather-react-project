@@ -5,6 +5,7 @@ Welcome to the **Weather App**! This project was created as part of the **SheCod
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [Live Demo](#live-demo)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Installation](#installation)
@@ -14,6 +15,10 @@ Welcome to the **Weather App**! This project was created as part of the **SheCod
 ## Introduction
 
 The Weather App is a React-based application that provides current weather information for cities around the world. It fetches real-time data from an external weather API and displays details like temperature, weather conditions, humidity, wind speed, and more. This project helped me solidify key React concepts such as working with components, state, props, and API requests.
+
+## Live Demo
+
+https://thaiha-weather-app.netlify.app/
 
 ## Features
 
@@ -46,13 +51,13 @@ To run the app locally on your machine:
 
 3. Install the necessary dependencies:
    
-  ```bash
-  npm install
+   ```bash
+   npm install
 
 4. Start the development server:
 
-  ```bash
-  npm start
+   ```bash
+   npm start
 
 5. The app will run at http://localhost:3000.
 
@@ -64,3 +69,4 @@ View additional information such as humidity, wind speed, and a weather descript
 
 ## API Used
 This app uses the OpenWeather API to retrieve real-time weather data. You can find more information about the API at https://openweathermap.org.
+
